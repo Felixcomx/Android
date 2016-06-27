@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.soufelix.minhacaderneta.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nova Receita"
+        android:id="@+id/btReceita"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ger. Registros"
+        android:id="@+id/btRegistros"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignRight="@+id/gridLayout"
+        android:layout_alignEnd="@+id/gridLayout"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nova Despesa"
+        android:id="@+id/btDespesa"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/btRegistros"
+        android:layout_alignStart="@+id/btRegistros" />
+
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_below="@+id/btDespesa"
+        android:id="@+id/gridLayout">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="249dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:choiceMode="singleChoice"
+            android:id="@+id/listViewDesp2"/>
+    </GridLayout>
+
+</RelativeLayout>

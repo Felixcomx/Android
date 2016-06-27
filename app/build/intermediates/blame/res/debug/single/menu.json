@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Android\\MinhaCaderneta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_receita.xml",
+        "source": "C:\\Android\\MinhaCaderneta\\app\\src\\main\\res\\menu\\menu_receita.xml"
+    },
+    {
+        "merged": "C:\\Android\\MinhaCaderneta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Android\\MinhaCaderneta\\app\\src\\main\\res\\menu\\menu_main.xml"
+    }
+]

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.soufelix.minhacaderneta.Receitas">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira a nova receita"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:shadowColor="#0d29f7"
+        android:textColor="#0919f7"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:id="@+id/editTextDescRec"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:id="@+id/textView2"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextValRec"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btVoltar"
+        android:layout_alignEnd="@+id/btVoltar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/editTextDescRec"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gravar"
+        android:id="@+id/btGravar"
+        android:onClick="cliquebotao"
+        android:layout_below="@+id/editTextValRec"
+        android:layout_toRightOf="@+id/btVoltar"
+        android:layout_toEndOf="@+id/btVoltar"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:id="@+id/btVoltar"
+        android:layout_alignBottom="@+id/btGravar"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/editTextCatRec"
+        android:layout_above="@+id/btGravar"
+        android:layout_alignRight="@+id/editTextDescRec"
+        android:layout_alignEnd="@+id/editTextDescRec"
+        android:layout_alignLeft="@+id/btGravar"
+        android:layout_alignStart="@+id/btGravar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/editTextDescRec"
+        android:layout_alignLeft="@+id/editTextCatRec"
+        android:layout_alignStart="@+id/editTextCatRec" />
+
+
+    <RadioButton android:id="@+id/radio_Frequente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequente"
+        android:onClick="onRadioButtonClicked"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <RadioButton android:id="@+id/radio_Eventual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventual"
+        android:onClick="onRadioButtonClicked"
+        android:layout_alignTop="@+id/radio_Frequente"
+        android:layout_toLeftOf="@+id/textView4"
+        android:layout_toStartOf="@+id/textView4" />
+</RelativeLayout>
