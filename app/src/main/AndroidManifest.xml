@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Despesas" />
-        <activity android:name=".Receita" />
+        <activity android:name=".Receitas" />
         <activity android:name=".registros"></activity>
     </application>
 

@@ -26,7 +26,11 @@ public class registros extends AppCompatActivity {
         itens = dbManager.getregistros();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itens);
         final ListView listView = (ListView) findViewById(R.id.listViewRegistros);
-        listView.setAdapter(adapter);
+
+        if (itens != null) {
+            listView.setAdapter(adapter);
+        }
+
         listView.setTextFilterEnabled(true);
 
 

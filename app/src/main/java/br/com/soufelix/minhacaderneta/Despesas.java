@@ -4,67 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Despesas extends AppCompatActivity {
 
+    Spinner categoria;
     private String descricao;
-    private String categoria;
     private String valor;
     private String tipo;
     private String frequencia;
     private long id;
-
-    public String getFrequencia() {
-        return frequencia;
-    }
-
-    public void setFrequencia(String frequencia) {
-        this.frequencia = frequencia;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getValor() {
-        return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +38,10 @@ public class Despesas extends AppCompatActivity {
         });
 
 
+        categoria =(Spinner)findViewById(R.id.dpCategoria);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.categoria_despesas, android.R.layout.simple_spinner_dropdown_item);
+        categoria.setAdapter(adapter);
+
     }
 
     public void cliquebotao(View view){
@@ -91,16 +49,15 @@ public class Despesas extends AppCompatActivity {
 
         EditText descDespB = (EditText)findViewById(R.id.editTextDescDesp);
         EditText valDespB = (EditText)findViewById((R.id.editTextValDesp));
-        EditText catDespB = (EditText)findViewById((R.id.editTextCatDesp));
         String descDesp = descDespB.getText().toString();
         String valDesp = valDespB.getText().toString();
         String tipDesp = " - ";
         String frequencia = "";
-        String catDesp = catDespB.getText().toString();
+        Spinner catDesp = (Spinner) findViewById(R.id.dpCategoria);
 
         String resultado;
 
-        resultado = crud.insereDado(descDesp,valDesp,tipDesp, frequencia, catDesp);
+        resultado = crud.insereDado(descDesp,valDesp,tipDesp, frequencia, String.valueOf(catDesp.getSelectedItem()));
 // voltar a tela inicial apos gravar
         Intent Activity3 = new Intent(Despesas.this, MainActivity.class);
         startActivityForResult(Activity3, 1);
@@ -109,18 +66,7 @@ public class Despesas extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
     }
 
-    public void onRadioButtonClicked(View view) {
 
-        boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId()) {
-            case R.id.radio_Eventual:
-                if (checked)
-                    break;
-            case R.id.radio_Frequente:
-                if (checked)
-                    break;
-        }
-    }
 
     }
 

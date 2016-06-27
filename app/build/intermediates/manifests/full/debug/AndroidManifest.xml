@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name="br.com.soufelix.minhacaderneta.Despesas" />
-        <activity android:name="br.com.soufelix.minhacaderneta.Receita" />
+        <activity android:name="br.com.soufelix.minhacaderneta.Receitas" />
         <activity android:name="br.com.soufelix.minhacaderneta.registros" />
     </application>
 

@@ -2,4 +2,29 @@
     <string name="app_name">MinhaCaderneta</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_receita">receita</string>
+
+    <string-array name="categoria_despesas">
+        <item>Alimentação</item>
+        <item>Cuidados Pessoais</item>
+        <item>Despesas com o Carro</item>
+        <item>Educação</item>
+        <item>Intretenimento</item>
+        <item>Moradia</item>
+        <item>Presente</item>
+        <item>Saúde</item>
+        <item>Segurança</item>
+        <item>Transporte</item>
+        <item>Telefonia</item>
+        <item>Viagens</item>
+        <item>Outros</item>
+    </string-array>>
+
+    <string-array name="categoria_receitas">
+        <item>Freelancer</item>
+        <item>Presente</item>
+        <item>Salário</item>
+        <item>Outros</item>
+    </string-array>>
+
+
 </resources>

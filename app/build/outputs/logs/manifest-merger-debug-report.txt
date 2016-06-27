@@ -64,10 +64,10 @@ activity#br.com.soufelix.minhacaderneta.Despesas
 ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:21:9-46
 	android:name
 		ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:21:19-43
-activity#br.com.soufelix.minhacaderneta.Receita
-ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:22:9-45
+activity#br.com.soufelix.minhacaderneta.Receitas
+ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:22:9-46
 	android:name
-		ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:22:19-42
+		ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:22:19-43
 activity#br.com.soufelix.minhacaderneta.registros
 ADDED from C:\Android\MinhaCaderneta\app\src\main\AndroidManifest.xml:23:9-56
 	android:name

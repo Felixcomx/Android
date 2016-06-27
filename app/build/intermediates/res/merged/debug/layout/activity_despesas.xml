@@ -46,12 +46,11 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextValDesp"
-        android:layout_above="@+id/btVoltar"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/btVoltar"
+        android:layout_alignStart="@+id/btVoltar"
         android:layout_alignRight="@+id/btVoltar"
-        android:layout_alignEnd="@+id/btVoltar"
-        android:layout_toRightOf="@+id/textView5"
-        android:layout_toEndOf="@+id/textView5"
-        android:layout_below="@+id/textView3" />
+        android:layout_alignEnd="@+id/btVoltar" />
 
 
 
@@ -69,11 +68,11 @@
         android:layout_height="wrap_content"
         android:text="R$"
         android:id="@+id/textView5"
-        android:textSize="15dp"
-        android:layout_alignBaseline="@+id/editTextCatDesp"
-        android:layout_alignBottom="@+id/editTextCatDesp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -92,9 +91,9 @@
         android:layout_height="wrap_content"
         android:text="Voltar"
         android:id="@+id/btVoltar"
-        android:layout_below="@+id/editTextCatDesp"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_below="@+id/editTextValDesp"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -105,47 +104,18 @@
         android:layout_alignLeft="@+id/btGravar"
         android:layout_alignStart="@+id/btGravar" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/depTipo"
-        android:text="D"
-        android:visibility="gone"/>
 
-    <EditText
+
+    <Spinner
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:id="@+id/editTextCatDesp"
-        android:layout_below="@+id/textView4"
+        android:id="@+id/dpCategoria"
+        android:spinnerMode="dropdown"
+        android:layout_alignBottom="@+id/editTextValDesp"
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
         android:layout_alignRight="@+id/editTextDescDesp"
         android:layout_alignEnd="@+id/editTextDescDesp" />
-
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    </RadioGroup>
-
-    <RadioButton android:id="@+id/radio_Frequente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Frequente"
-        android:onClick="onRadioButtonClicked"
-        android:layout_above="@+id/editTextDescDesp"
-        android:layout_alignRight="@+id/editTextDescDesp"
-        android:layout_alignEnd="@+id/editTextDescDesp" />
-
-    <RadioButton android:id="@+id/radio_Eventual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eventual"
-        android:onClick="onRadioButtonClicked"
-        android:layout_above="@+id/editTextDescDesp"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
 
 
 </RelativeLayout>

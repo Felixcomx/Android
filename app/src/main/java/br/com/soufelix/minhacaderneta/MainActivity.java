@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         receitaActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Activity1 = new Intent(MainActivity.this, Receita.class);
+                Intent Activity1 = new Intent(MainActivity.this, Receitas.class);
                 startActivityForResult(Activity1, 1);
 
             }
