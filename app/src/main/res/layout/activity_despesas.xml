@@ -41,17 +41,17 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="60dp"
+        android:layout_width="40dp"
         android:layout_height="60dp"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextValDesp"
         android:layout_above="@+id/btVoltar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_toStartOf="@+id/editTextCatDesp"
         android:layout_alignRight="@+id/btVoltar"
-        android:layout_alignEnd="@+id/btVoltar" />
+        android:layout_alignEnd="@+id/btVoltar"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_below="@+id/textView3" />
 
 
 
@@ -64,6 +64,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$"
+        android:id="@+id/textView5"
+        android:textSize="15dp"
+        android:layout_alignBaseline="@+id/editTextCatDesp"
+        android:layout_alignBottom="@+id/editTextCatDesp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -125,16 +135,17 @@
         android:text="Frequente"
         android:onClick="onRadioButtonClicked"
         android:layout_above="@+id/editTextDescDesp"
-        android:layout_toRightOf="@+id/radio_Eventual"
-        android:layout_toEndOf="@+id/radio_Eventual" />
+        android:layout_alignRight="@+id/editTextDescDesp"
+        android:layout_alignEnd="@+id/editTextDescDesp" />
 
     <RadioButton android:id="@+id/radio_Eventual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Eventual"
         android:onClick="onRadioButtonClicked"
-        android:layout_alignTop="@+id/radio_Frequente"
-        android:layout_toLeftOf="@+id/textView4"
-        android:layout_toStartOf="@+id/textView4" />
+        android:layout_above="@+id/editTextDescDesp"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
 
 </RelativeLayout>
